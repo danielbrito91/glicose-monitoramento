@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Histórico
+{% endblock %}
+
+{% block main %}
+    <h1>Histórico da Glicemia</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Glicemia (mg/dL)</th>
+                <th>Jejum</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            {% for glic in user_glic %}
+            <tr>
+                <td>{{ glic.data}}</td>
+                <td>{{ glic.resultado }}</td>
+                <td>{{ glic.jejum }}</td>
+            </tr>
+            {% endfor %}
+        </tbody> 
+    </table>
+
+{% endblock %}

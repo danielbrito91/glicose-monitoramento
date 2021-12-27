@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Refeição
+{% endblock %}
+
+{% block main %}
+    <h1>Inserir Refeição</h1>
+
+    <form action="/insert_meal" method="post">
+        <div class="form-group">
+            <input type="datetime-local" name="data_hora" placeholder="Data e horário">
+        </div>
+        {% for refeicao in refeicoes %}
+                <input type="checkbox" name="refeicao" value="{{ refeicao }}">{{ refeicao }}
+        {% endfor %}
+        <div class="form-group">
+            <input type="text" name="descricao" placeholder="Descrição">
+        </div>
+        <button class="btn btn-primary" type="submit">Confirmar</button>
+    </form>
+
+{% endblock %}

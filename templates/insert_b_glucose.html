@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Glicose
+{% endblock %}
+
+{% block main %}
+    <h1>Inserir medidas de glicose</h1>
+
+    <form action="/insert_b_glucose" method="post">
+        <div class="form-group">
+            <input type="datetime-local" name="data_hora" placeholder="Data e horário">
+        </div>
+        <div class="form-group">
+            <input type="number" name="resultado" placeholder="Glicose(mg/dL)">
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="jejum" placeholder="Jejum"> Jejum
+        </div>
+        <div class="form-group">
+            <input type="text" name="observacao" placeholder="Observação">
+        </div>
+        <button class="btn btn-primary" type="submit">Confirmar</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Registrar
+{% endblock %}
+
+{% block main %}
+    <h1>Registrar Usuário</h1>
+
+    <form action="/register" method="post">
+        <div class="form-group">
+            <input type="text" name="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <input type="text" name="email" placeholder="e-mail">
+        </div>
+        <div class="form-group">
+            <input  name="password" placeholder="Senha" type="password">
+        </div>
+        <div class="form-group">
+            <input  name="confirmation" placeholder="Confirmar senha" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Registrar</button>
+    </form>
+
+{% endblock %}
